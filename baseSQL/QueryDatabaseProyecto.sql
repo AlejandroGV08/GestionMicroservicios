@@ -22,7 +22,7 @@ CREATE TABLE notificaciones(
     mensaje VARCHAR(500) NOT NULL,
     asignado INT NOT NULL,
     fecha DATETIME DEFAULT GETDATE(),
-    PRIMARY KEY (idTarea, asignado), -- Clave primaria compuesta
+    PRIMARY KEY (idTarea, asignado),
     FOREIGN KEY (idTarea) REFERENCES tareas(id) ON DELETE CASCADE,
     FOREIGN KEY (asignado) REFERENCES usuarios(id) ON DELETE NO ACTION
 );
